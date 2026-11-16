@@ -150,10 +150,3 @@ public record RsData<T>(String resultCode, String msg, T data) {
 | 012 | RsData data 타입을 Object로 변경 및 ForPostRsData 제거 |
 | 013 | RsData를 제네릭으로 변경 |
 | 014 | 삭제 API 응답에서 data 제거 및 RsData 생성자 추가 |
-
-## 앞으로 개선할 점
-
-- 테스트에 `@ActiveProfiles("test")` 적용 (지금은 테스트도 dev DB를 사용)
-- 삭제 API를 `GET` 대신 `@DeleteMapping`으로 변경
-- 없는 id 요청 시 500 대신 404 응답 (`Optional.get()` 예외 처리)
-- 글/댓글 작성, 수정 API 추가
